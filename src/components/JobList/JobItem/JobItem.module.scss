@@ -1,0 +1,98 @@
+@import '../../../style/mixins.scss';
+@import '../../../style/variables.scss';
+
+.jobItem{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    box-shadow: $mainShadow;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 5px;
+    position: relative;
+    
+}
+
+.left{
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    &:hover .jobTitle{
+        color: $desaturatedDarkCyan;
+    }
+    img{
+        padding-right: 15px;
+    }
+    .details{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between; 
+        height: 80%;
+    }
+    .company{
+        color: $desaturatedDarkCyan;
+        font-weight: bold;
+    }
+    .topRow{
+        display: flex;
+        align-items: center
+    }
+    .jobTitle{
+        font-weight: bold;
+       
+
+    }
+    .whenPosted{
+        opacity: .6;
+        display: flex; 
+        align-items: center;
+        font-size: 12px
+
+    }
+}
+
+.right{
+    display: flex; 
+    align-items: center;
+    flex-flow: wrap;
+}
+
+@media(max-width: 1060px){
+    .jobItem{
+        display: block;
+        padding-top: 70px;
+
+        &:not(:first-child){
+            margin-top:40px;
+        }
+    }
+    .left{
+        padding-bottom: 40px;
+       
+        img{
+            position: absolute;
+            transform: scale(.8) translateY(-50%);
+            top:0;
+            left: 0;
+        }
+       
+    }
+    .jobTitle{
+        padding: 14px 0;
+        font-size: 18px;
+    }
+    .whenPosted{
+        position: relative;
+    }
+    .whenPosted::after{
+      content: '';
+      display: block;
+      background: #333333;
+      height: 1px;
+        width: 200px;
+      position: absolute;
+      bottom: -20px;
+      opacity: .6;
+      
+    }
+}

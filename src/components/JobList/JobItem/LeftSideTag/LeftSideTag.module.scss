@@ -1,0 +1,26 @@
+@import '../../../../style/variables.scss';
+.tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.p{
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 20px;
+    margin-left: 5px;
+    
+
+}
+.new{
+    background: $desaturatedDarkCyan;
+}
+.featured{
+    background: #333333;
+}
+
